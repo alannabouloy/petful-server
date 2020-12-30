@@ -48,7 +48,7 @@ class Queue {
     let currNode = this.first;
     const nodeArray = [];
     while(currNode){
-      nodeArray.push(currNode)
+      nodeArray.push({value: currNode.value, next: currNode.next})
       currNode = currNode.next
     }
     return nodeArray

@@ -3,10 +3,6 @@ module.exports = {
     'Randy Lahey',
     'Trevor Cory',
     'Jim Lahey',
-    'Cassandra Hartfield',
-    'Hermione Jenkins',
-    'Cleo Clearwater',
-    'Bill Nyugen',
   ],
 
   dogs: [
