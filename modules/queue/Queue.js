@@ -45,7 +45,13 @@ class Queue {
 
   all() {
     // Return all items in the queue.
-    
+    let currNode = this.first;
+    const nodeArray = [];
+    while(currNode){
+      nodeArray.push(currNode)
+      currNode = currNode.next
+    }
+    return nodeArray
   }
 }
 
