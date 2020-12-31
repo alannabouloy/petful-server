@@ -3,7 +3,6 @@ const json = require('body-parser').json()
 
 const Pets = require('./pets.service')
 const People = require('../people/people.service')
-const { restart } = require('nodemon')
 
 const router = express.Router()
 
