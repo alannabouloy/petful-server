@@ -5,6 +5,7 @@ const morgan = require('morgan')
 const helmet = require('helmet')
 const { NODE_ENV } = require('../../config')
 const { validateBearerToken } = require('../middleware/token-auth')
+const errorHandler = require('../middleware/error-handler')
 
 const app = express()
 
@@ -22,5 +23,7 @@ app.use(validateBearerToken)
 
 app.use('/people', require('../people/people.router'))
 app.use('/pets', require('../pets/pets.router'))
+
+app.use(errorHandler)
 
 module.exports = app
