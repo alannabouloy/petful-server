@@ -23,8 +23,8 @@ app.use(helmet())
 
 app.use(validateBearerToken)
 
-app.use('/people', require('../people/people.router'))
-app.use('/pets', require('../pets/pets.router'))
+app.use('/api/people', require('../people/people.router'))
+app.use('/api/pets', require('../pets/pets.router'))
 
 app.use(errorHandler)
 
