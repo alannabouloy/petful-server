@@ -226,5 +226,20 @@ module.exports = {
       name: 'Vince the Pince',
       story: 'Found in neighborhood'
     }
+  ],
+
+  names: [
+    'Cassie Langford',
+    'Hermione Felton',
+    'Ronald Granger',
+    'James Reynolds',
+    'Betty Swift',
+    'Marisha Bailey',
+    'Laura Ray',
+    'Klaus Hessing',
+    'Elijah Morningstar',
+    'Percy Chase',
+    'Anabeth Jackson',
+    'Molly Widowgast',
   ]
 }
