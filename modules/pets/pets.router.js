@@ -28,6 +28,7 @@ router.delete('/', json, (req, res) => {
       .status(400)
       .json({error: `'type' must be either 'cat' or 'dog'`})
   }
+  
 
   const adopted = Pets.dequeue(type)
 

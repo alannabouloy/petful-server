@@ -37,6 +37,12 @@ router.post('/', json, (req, res) => {
 })
 
 router.delete('/', (req, res) => {
+  const people = People.get()
+  if(people.length === 0){
+    return res
+      .status(204)
+      .json({message: 'queue is empty'})
+  }
   const person = People.dequeue()
   res
     .status(201)
