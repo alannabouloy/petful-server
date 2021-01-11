@@ -6,7 +6,19 @@ const People = require('../people/people.service')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
+const refillQueue = (req, res, next) => {
+  const pets = Pets.get()
+  if(!pets.cat){
+    Pets.enqueue('cat')
+  }
+  if(!pets.dog){
+    Pets.enqueue('dog')
+  }
+
+  next()
+}
+
+router.get('/', refillQueue, (req, res) => {
   // Return all pets currently up for adoption.
   const pets = Pets.get()
   res
@@ -14,7 +26,7 @@ router.get('/', (req, res) => {
     .json(pets)
 })
 
-router.delete('/', json, (req, res) => {
+router.delete('/', json, refillQueue,(req, res) => {
   // Remove a pet from adoption.
   const {type} = req.body
   if(!type){

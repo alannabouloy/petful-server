@@ -1,5 +1,6 @@
 const Queue = require('../queue/Queue')
 const store = require('../../store')
+const { enqueue } = require('../people/people.service')
 
 // Set up initial data.
 // --------------------
@@ -32,6 +33,15 @@ module.exports = {
 
     if(type === 'dog'){
       return pets.dogs.dequeue()
+    }
+  },
+
+  enqueue(type){
+    if(type === 'cat'){
+      store.cats.forEach(cat => pets.cats.enqueue(cat))
+    }
+    if(type === 'dog'){
+      store.dogs.forEach(dog => pets.dogs.enqueue(dog))
     }
   }
 }
