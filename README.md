@@ -6,9 +6,11 @@ There are two endpoints for this API:
     1. `/api/people`
     2. `/api/pets`
 
-For `/api/people` you are able to perform two request calls: GET and POST. 
+For `/api/people` you are able to perform three request calls: GET, DELETE, and POST. 
 
-GET will return a list of the people currently in queue in object format with key value pairs: 'name' and 'user'. Name should be a string and user should be a boolean value. GET calls will dequeue the person at the top of the queue immediately following the return of the list.
+GET will return a list of the people currently in queue in object format with key value pairs: 'name' and 'user'. Name should be a string and user should be a boolean value. 
+
+DELETE requests will dequeue the top name in queue and return their information, including 'name' and whether or not they are the user. 
 
 POST requests require a 'name' value in order to be accepted, but can also take a 'user' value. The 'name' value is expected to be a string and the 'user' value is expected to be a boolean and defaults to false if not provided. Upon a POST request the new person will be enqueued and the current queue will be returned with the new person added to the bottom of the list. 
 
