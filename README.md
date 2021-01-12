@@ -1,6 +1,10 @@
 # Petful Server
 
-This is the server for the Petful application. The server is not connected to a database, so it will reset periodically. 
+This is the server for the [Petful](https://petful-adoption-roan.vercel.app/) application. The server is not connected to a database, so it will reset periodically. 
+
+Server was built using Express.js and Node while front-end was built using React.
+
+You can find the code for the front-end application [here](https://github.com/alannabouloy/petful-client). 
 
 There are two endpoints for this API: 
     1. `/api/people`
